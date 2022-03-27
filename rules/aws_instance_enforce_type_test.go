@@ -28,7 +28,7 @@ rule "aws_instance_enforce_type" {
 			Expected: helper.Issues{
 				{
 					Rule:    NewAwsInstanceEnforceTypeRule(),
-					Message: "wrong instance type t2.nano, should be on of: [t2.micro t3.micro]",
+					Message: "wrong instance type t2.nano, should be one of: [t2.micro t3.micro]",
 					Range: hcl.Range{
 						Filename: "resource.tf",
 						Start:    hcl.Pos{Line: 3, Column: 21},

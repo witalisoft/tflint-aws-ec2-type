@@ -55,7 +55,7 @@ func (r *AwsInstanceEnforceTypeRule) Check(runner tflint.Runner) error {
 			if !checkContains(config.Types, instanceType) {
 				return runner.EmitIssueOnExpr(
 					r,
-					fmt.Sprintf("wrong instance type %s, should be on of: %v", instanceType, config.Types),
+					fmt.Sprintf("wrong instance type %s, should be one of: %v", instanceType, config.Types),
 					attribute.Expr,
 				)
 			} else {
