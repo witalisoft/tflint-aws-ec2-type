@@ -9,13 +9,10 @@ import (
 func main() {
 	plugin.Serve(&plugin.ServeOpts{
 		RuleSet: &tflint.BuiltinRuleSet{
-			Name:    "template",
+			Name:    "test",
 			Version: "0.1.0",
 			Rules: []tflint.Rule{
-				rules.NewAwsInstanceExampleTypeRule(),
-				rules.NewAwsS3BucketExampleLifecycleRuleRule(),
-				rules.NewLocalFileExampleProvisionerRule(),
-				rules.NewTerraformBackendTypeRule(),
+				rules.NewAwsInstanceEnforceTypeRule(),
 			},
 		},
 	})
